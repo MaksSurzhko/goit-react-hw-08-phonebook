@@ -1,7 +1,7 @@
 import React from "react";
 import pcss from "../phonebook/phonebook.module.css";
 
-const Filter = ({ filter, onFilterChange }) => {
+export const Filter = ({ filter, onFilterChange }) => {
   return (
     <label className={pcss.clabel} htmlFor="filterInput">
       Find contacts by name:
@@ -17,4 +17,4 @@ const Filter = ({ filter, onFilterChange }) => {
   );
 };
 
-export default Filter;
+// export default Filter;

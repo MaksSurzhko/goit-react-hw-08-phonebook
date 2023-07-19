@@ -4,7 +4,7 @@ import fcss from "../contform/form.module.css";
 import { selectContacts } from "../redux/selectors";
 import { addContact } from "../redux/contactsSlice";
 
-const ContactForm = () => {
+ export const ContactForm = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
@@ -74,5 +74,7 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+// export default ContactForm;
+
+
 
