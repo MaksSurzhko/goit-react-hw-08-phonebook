@@ -8,8 +8,7 @@ const HomePage = () => {
       backgroundPosition: 'center', 
       height: '100vh', 
       display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
+      justifyContent: 'flex-end',
     }}>
   <h1 style={{
     color: '#2E2F42',
