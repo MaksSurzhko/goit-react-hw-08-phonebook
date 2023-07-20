@@ -22,7 +22,7 @@ export const RegistrationForm = () => {
   return (
     <div className={rcss.rbox}>
       
-          <h2 className={rcss.rtitle}>Registration form</h2>
+          <h2 className={rcss.rtitle}>Sign up form</h2>
           <form className={rcss.rform} onSubmit={handleSubmit}>
               <label className={rcss.rlabel}>
                   Name
@@ -36,7 +36,7 @@ export const RegistrationForm = () => {
                   Password
                   <input className={rcss.rinput} type="password" name='password'/>
               </label>
-              <button type='submit' className={rcss.rbtn}>Register</button>
+              <button type='submit' className={rcss.rbtn}>Sign Up</button>
           </form>
     </div>
   );

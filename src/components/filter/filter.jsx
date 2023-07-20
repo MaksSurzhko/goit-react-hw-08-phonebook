@@ -3,6 +3,7 @@ import pcss from "../contform/form.module.css";
 
 export const Filter = ({ filter, onFilterChange }) => {
   return (
+    
     <label className={pcss.clabel} htmlFor="filterInput">
       Find contacts by name:
       <input
@@ -14,6 +15,7 @@ export const Filter = ({ filter, onFilterChange }) => {
         onChange={onFilterChange}
       />
     </label>
+    
   );
 };
 

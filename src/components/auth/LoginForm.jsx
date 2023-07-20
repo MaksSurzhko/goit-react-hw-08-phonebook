@@ -32,21 +32,6 @@ export const LogInForm = () => {
               </label>
                 <button className={lcss.rbtn}>Log in</button>
             </form>
-
-
-      {/* <Title>LogIn form of User</Title>
-      <FormWrapper onSubmit={handleSubmit} autoComplete="off">
-        <TitleInput>
-          email
-          <InputField type="email" name="email" />
-        </TitleInput>
-        <TitleInput>
-          Password
-          <InputField type="password" name="password" />
-        </TitleInput>
-
-        <ButtonAdd type="submit">Log In</ButtonAdd>
-      </FormWrapper> */}
     </div>
   );
 };

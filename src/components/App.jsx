@@ -135,7 +135,7 @@ const ContactsPage = lazy(() => import('./pages/ContactsPage'));
           <Route
             path="/contacts"
             element={
-              <PrivateRoute component={ContactsPage} redirectTo="/login" />
+              <PrivateRoute component={ContactsPage} redirectTo="/" />
             }
           />
         </Route>

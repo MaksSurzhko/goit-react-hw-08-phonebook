@@ -38,7 +38,7 @@ import { addContact } from "../redux/contactsSlice";
   };
 
   return (
-     <div className={fcss.cont}>
+     
     <form className={fcss.pform} onSubmit={handleSubmit}>
       <label className={fcss.plabel} htmlFor="nameInput">
         Name
@@ -72,7 +72,7 @@ import { addContact } from "../redux/contactsSlice";
         Add contact
       </button>
       </form>
-      </div>
+
   );
 };
 

@@ -25,9 +25,11 @@ const ContactsPage = () => {
       <h1 className={css.ptitle}>Phonebook</h1>
       <ContactForm />
 
-      <h2 className={css.ptitle}>Contacts</h2>
+      <h2 className={css.ctitle}>Contacts</h2>
+      
       <Filter />
       {contacts.length !== 0 && <ContactList />}
+      
     </div>
   );
 };

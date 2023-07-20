@@ -92,12 +92,13 @@
 
 
 // import { useState, useEffect } from 'react';
-import { ListOfContact, ContactItem } from './list.styled';
+// import { ListOfContact, ContactItem } from './list.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteContact } from '../redux/contactsSlice';
 import { selectFilterContact } from '../redux/selectors';
 // import { UpdateForm } from '../updateForm/updateForm';
 // import { fetchContacts } from '../redux/contactsSlice';
+import lcss from "../contlist/list.module.css";
 
 export const ContactList = () => {
   const dispatch = useDispatch();
@@ -114,36 +115,26 @@ export const ContactList = () => {
   // }, [data, dispatch]);
 
   return (
-    <ListOfContact>
+    
+    <ul className={lcss.llist}>
       {/* {data && <UpdateForm dataUser={data} setData={setData} />}
       {!data && */}
         {contacts.map(contact => (
-          <ContactItem key={contact.id}>
+          <li className={lcss.item} key={contact.id}>
             {contact.name}: {contact.number}
             {(
-              <div>
-                {/* <button
-                  type="button"
-                  onClick={() =>
-                    setData({
-                      id: contact.id,
-                      name: contact.name,
-                      number: contact.number,
-                    })
-                  }
-                >
-                  Update
-                </button> */}
                 <button
+                  className={lcss.bbtn}
                   type="button"
                   onClick={() => dispatch(deleteContact(contact.id))}
                 >
                   Delete
                 </button>
-              </div>
+              
             )}
-          </ContactItem>
+          </li>
         ))}
-    </ListOfContact>
+      </ul>
+      
   );
 };
