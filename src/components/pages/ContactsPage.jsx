@@ -7,6 +7,7 @@ import {
 import { fetchContacts } from '../redux/contactsSlice';
 import { ContactForm } from '../contform/form';
 import { Filter } from '../filter/filter';
+import css from '../contform/form.module.css'
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
@@ -21,10 +22,10 @@ const ContactsPage = () => {
 
   return (
     <div>
-      <h1>Phonebook</h1>
+      <h1 className={css.ptitle}>Phonebook</h1>
       <ContactForm />
 
-      <h2>Contacts:</h2>
+      <h2 className={css.ptitle}>Contacts</h2>
       <Filter />
       {contacts.length !== 0 && <ContactList />}
     </div>

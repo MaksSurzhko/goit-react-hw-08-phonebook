@@ -10,19 +10,19 @@ import { addContact } from "../redux/contactsSlice";
   const [number, setNumber] = useState("");
   const contacts = useSelector(selectContacts);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+   const handleSubmit = (event) => {
+     event.preventDefault();
 
-  const isDuplicateContact = contacts.some(
-    (contact) => contact.name === name || contact.number === number
-  );
+     const isDuplicateContact = contacts.some(
+       (contact) => contact.name === name || contact.number === number
+     );
 
-  if (isDuplicateContact) {
-    alert(`${name} is already in contacts`);
-    return;
-  }
+     if (isDuplicateContact) {
+       alert(`${name} is already in contacts`);
+       return;
+     }
 
-  dispatch(addContact({ name, number }));
+     dispatch(addContact({name, number } ));
   setName("");
   setNumber("");
 };
@@ -38,6 +38,7 @@ import { addContact } from "../redux/contactsSlice";
   };
 
   return (
+     <div className={fcss.cont}>
     <form className={fcss.pform} onSubmit={handleSubmit}>
       <label className={fcss.plabel} htmlFor="nameInput">
         Name
@@ -70,7 +71,8 @@ import { addContact } from "../redux/contactsSlice";
       <button className={fcss.pbtn} type="submit">
         Add contact
       </button>
-    </form>
+      </form>
+      </div>
   );
 };
 

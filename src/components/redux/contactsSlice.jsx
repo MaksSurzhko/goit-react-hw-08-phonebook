@@ -102,7 +102,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// GET /contacts
+
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchContacts',
   async (_, thunkAPI) => {
@@ -115,7 +115,7 @@ export const fetchContacts = createAsyncThunk(
   }
 );
 
-// POST /contacts
+
 export const addContact = createAsyncThunk(
   'contacts/addContact',
   async (newContact, thunkAPI) => {
@@ -129,7 +129,7 @@ export const addContact = createAsyncThunk(
   }
 );
 
-// DELETE /contacts/{contactId}
+
 export const deleteContact = createAsyncThunk(
   'contacts/deleteContact',
   async (contactId, thunkAPI) => {
@@ -143,20 +143,6 @@ export const deleteContact = createAsyncThunk(
   }
 );
 
-// UPDATE /contacts/{contactId}
-export const updateContact = createAsyncThunk(
-  'contacts/updateContact',
-  async (contact, thunkAPI) => {
-    try {
-      await axios.patch(`/contacts/${contact.id}`, {
-        name: contact.name,
-        number: contact.number,
-      });
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  }
-);
 
 const contactsInitialState = { items: [], isLoading: false, error: null };
 

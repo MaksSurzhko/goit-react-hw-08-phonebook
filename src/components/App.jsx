@@ -8,6 +8,7 @@
 // import { selectFilter, selectContacts } from "./redux/selectors";
 // import {addContact, deleteContact, fetchContacts} from "../components/redux/contactsSlice"
 // import { filterUser } from "./redux/filterSlice";
+// import Apps from '../components/Apps'
 
 
 
@@ -100,7 +101,7 @@ const RegisterPage = lazy(() => import('./pages/RegisterPage'));
 const LoginPage = lazy(() => import('./pages/LoginPage'));
 const ContactsPage = lazy(() => import('./pages/ContactsPage'));
 
-export const App = () => {
+ export const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
 

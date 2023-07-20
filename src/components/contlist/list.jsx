@@ -33,37 +33,96 @@
 
 // export default ContactList;
 
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
+// import { ListOfContact, ContactItem } from './list.styled';
+// import { useSelector, useDispatch } from 'react-redux';
+// import { deleteContact } from '../redux/contactsSlice';
+// import { selectFilterContact } from '../redux/selectors';
+// import { UpdateForm } from '../updateForm/updateForm';
+// import { fetchContacts } from '../redux/contactsSlice';
+
+// export const ContactList = () => {
+//   const dispatch = useDispatch();
+
+//   const [data, setData] = useState(null);
+
+//   const contacts = useSelector(selectFilterContact);
+ 
+  
+
+//   useEffect(() => {
+//     dispatch(fetchContacts());
+//     // console.log(data);
+//   }, [data, dispatch]);
+
+//   return (
+//     <ListOfContact>
+//       {data && <UpdateForm dataUser={data} setData={setData} />}
+//       {!data &&
+//         contacts.map(contact => (
+//           <ContactItem key={contact.id}>
+//             {contact.name}: {contact.number}
+//             {(
+//               <div>
+//                 <button
+//                   type="button"
+//                   onClick={() =>
+//                     setData({
+//                       id: contact.id,
+//                       name: contact.name,
+//                       number: contact.number,
+//                     })
+//                   }
+//                 >
+//                   Update
+//                 </button>
+//                 <button
+//                   type="button"
+//                   onClick={() => dispatch(deleteContact(contact.id))}
+//                 >
+//                   Delete
+//                 </button>
+//               </div>
+//             )}
+//           </ContactItem>
+//         ))}
+//     </ListOfContact>
+//   );
+// };
+
+
+// import { useState, useEffect } from 'react';
 import { ListOfContact, ContactItem } from './list.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteContact } from '../redux/contactsSlice';
 import { selectFilterContact } from '../redux/selectors';
-import { UpdateForm } from '../updateForm/updateForm';
-import { fetchContacts } from '../redux/contactsSlice';
+// import { UpdateForm } from '../updateForm/updateForm';
+// import { fetchContacts } from '../redux/contactsSlice';
 
 export const ContactList = () => {
   const dispatch = useDispatch();
 
-  const [data, setData] = useState(null);
+  // const [data, setData] = useState(null);
 
   const contacts = useSelector(selectFilterContact);
+ 
   
 
-  useEffect(() => {
-    dispatch(fetchContacts());
-    // console.log(data);
-  }, [data, dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchContacts());
+  //   // console.log(data);
+  // }, [data, dispatch]);
 
   return (
     <ListOfContact>
-      {data && <UpdateForm dataUser={data} setData={setData} />}
-      {!data &&
-        contacts.map(contact => (
+      {/* {data && <UpdateForm dataUser={data} setData={setData} />}
+      {!data && */}
+        {contacts.map(contact => (
           <ContactItem key={contact.id}>
             {contact.name}: {contact.number}
             {(
               <div>
-                <button
+                {/* <button
                   type="button"
                   onClick={() =>
                     setData({
@@ -74,7 +133,7 @@ export const ContactList = () => {
                   }
                 >
                   Update
-                </button>
+                </button> */}
                 <button
                   type="button"
                   onClick={() => dispatch(deleteContact(contact.id))}
